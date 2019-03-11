@@ -1,6 +1,7 @@
 class TelaMenu {
     constructor(game) {
         this.init = function () {
+
             game.input.maxPointers = 1;
             // Deixar o jogo executando, mesmo se o browser mudar de aba?
             game.stage.disableVisibilityChange = false;
@@ -20,7 +21,7 @@ class TelaMenu {
         };
         this.preload = function () {
             game.load.crossOrigin = "anonymous";
-            game.load.image('Fundo', 'Sprites/Menu.png', 1280, 720);
+            game.load.image('Fundo', 'sprites/Menu.png', 1280, 720);
         };
         var txtLogo;
         var txtJogar;

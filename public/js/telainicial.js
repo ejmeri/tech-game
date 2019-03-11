@@ -1,6 +1,7 @@
 class TelaInicial {
     constructor(game) {
         this.init = function () {
+
             game.input.maxPointers = 1;
             // Deixar o jogo executando, mesmo se o browser mudar de aba?
             game.stage.disableVisibilityChange = false;
@@ -21,20 +22,20 @@ class TelaInicial {
         this.preload = function () {
             Global.getHighScore();
             game.load.crossOrigin = "anonymous";
-            game.load.spritesheet('bg', 'Sprites/Caca_cenario.png', 6400, 720);
-            game.load.image('colisor', 'Sprites/colisor.png', 1280, 25);
-            game.load.spritesheet("player", "Sprites/player.png", 32, 48);
-            game.load.spritesheet("player2", "Sprites/sprite.png", 282, 281);
-            game.load.image('facebook', "Sprites/Asset_facebook.png");
-            game.load.image('netflix', "Sprites/Asset_netflix.png");
-            game.load.image('youtube', "Sprites/Asset_youtube.png");
-            game.load.image('instagram', "Sprites/Asset_instagram.png");
-            game.load.image('whatsapp', "Sprites/Asset_whatsapp.png");
-            game.load.image('btnUp', "Sprites/btnUp.png");
-            game.load.image('btnDown', "Sprites/btnDown.png");
-            game.load.audio('jump', 'Sons/jump.wav');
-            game.load.audio('agachar', 'Sons/Slide2.wav');
-            game.load.audio('musicaGame', 'Sons/musicaGame.mp3');
+            game.load.spritesheet('bg', 'sprites/Caca_cenario.png', 6400, 720);
+            game.load.image('colisor', 'sprites/colisor.png', 1280, 25);
+            game.load.spritesheet("player", "sprites/player.png", 32, 48);
+            game.load.spritesheet("player2", "sprites/sprite.png", 282, 281);
+            game.load.image('facebook', "sprites/Asset_facebook.png");
+            game.load.image('netflix', "sprites/Asset_netflix.png");
+            game.load.image('youtube', "sprites/Asset_youtube.png");
+            game.load.image('instagram', "sprites/Asset_instagram.png");
+            game.load.image('whatsapp', "sprites/Asset_whatsapp.png");
+            game.load.image('btnUp', "sprites/btnUp.png");
+            game.load.image('btnDown', "sprites/btnDown.png");
+            game.load.audio('jump', 'songs/jump.wav');
+            game.load.audio('agachar', 'songs/Slide2.wav');
+            game.load.audio('musicaGame', 'songs/musicaGame.mp3');
         };
         var background;
         var player;
@@ -287,9 +288,9 @@ class TelaInicial {
             txtDistancia.setText("Score: " + distancia);
         }
         async function collisionHandler(player, icone) {
-            
+
             Global.newScore(distancia, user_id);
-            
+
             morto = true;
             btnUp.kill();
             btnDown.kill();

@@ -1,7 +1,7 @@
-
 class TelaTutorial {
     constructor(game) {
         this.init = function () {
+            
             game.input.maxPointers = 1;
             // Deixar o jogo executando, mesmo se o browser mudar de aba?
             game.stage.disableVisibilityChange = false;
@@ -21,8 +21,8 @@ class TelaTutorial {
         };
         this.preload = function () {
             game.load.crossOrigin = "anonymous";
-            game.load.image('Fundo', 'Sprites/imgTuto.png', 1280, 720);
-            game.load.image('btnJogar', 'Sprites/btnJogar.png');
+            game.load.image('Fundo', 'sprites/imgTuto.png', 1280, 720);
+            game.load.image('btnJogar', 'sprites/btnJogar.png');
         };
         var btnJogar;
         this.create = function () {
