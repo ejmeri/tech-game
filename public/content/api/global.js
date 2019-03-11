@@ -9,7 +9,6 @@ function postForm(form, elementId, elementResultId, redirect = '0') {
         crossDomain: true,
         success: function (retorno) {
             try {
-                console.log(retorno);
 
                 if (retorno.status) {
                     // location.href = redirect;

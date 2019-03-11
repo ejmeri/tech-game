@@ -100,12 +100,10 @@
                 url: '/user/' + data,
                 success: function (resp) {
                     if (!resp.status) {
-                        console.log(resp);
                         document.getElementById('retornoUser').innerHTML =
                             'Efetue seu cadastro.';
                     } else {
                         sessionStorage.setItem('username', resp.user.username);
-                        console.log(sessionStorage.getItem('username'))
                         sessionStorage.setItem('user_id', resp.user.id);
                         window.setInterval(() => {
                             location.href = '/game'
