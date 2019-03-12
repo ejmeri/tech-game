@@ -38,3 +38,4 @@ var distanciaMaior = 0;
 game.state.add("TelaInicial", TelaInicial);
 game.state.add("TelaMenu", TelaMenu);
 game.state.add("TelaTutorial", TelaTutorial);
+game.state.add("TelaCreditos", TelaCreditos);

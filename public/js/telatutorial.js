@@ -1,7 +1,7 @@
 class TelaTutorial {
     constructor(game) {
         this.init = function () {
-            
+
             game.input.maxPointers = 1;
             // Deixar o jogo executando, mesmo se o browser mudar de aba?
             game.stage.disableVisibilityChange = false;
@@ -35,6 +35,7 @@ class TelaTutorial {
         function telaJogar() {
             game.state.start("TelaInicial");
         }
-        this.update = function () {};
+        this.update = function () { };
     }
+
 }

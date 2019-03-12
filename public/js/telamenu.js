@@ -26,6 +26,8 @@ class TelaMenu {
         var txtLogo;
         var txtJogar;
         var txtTutorial;
+        var txtCreditos;
+        
         this.create = function () {
             var fundo = game.add.sprite(0, 0, 'Fundo');
             txtLogo = game.add.text(-200, 340, '', {
@@ -62,6 +64,19 @@ class TelaMenu {
             game.add.tween(txtTutorial).to({
                 x: game.world.centerX
             }, 500).start();
+
+            txtCreditos = game.add.text(-200, 600, '', {
+                font: '45px KidsZone',
+                fill: '#fff'
+            });
+            
+            txtCreditos.anchor.set(0.5);
+            txtCreditos.stroke = "#000000";
+            txtCreditos.strokeThickness = 6;
+            txtCreditos.inputEnabled = true;
+            txtCreditos.events.onInputDown.add(telaCreditos, this);
+            game.add.tween(txtCreditos).to({ x: game.world.centerX }, 500).start();
+
         };
 
         function play() {
@@ -71,10 +86,16 @@ class TelaMenu {
         function telaTutorial() {
             game.state.start('TelaTutorial');
         }
+
+        function telaCreditos(){
+            game.state.start('TelaCreditos');
+        }
+
         this.update = function () {
             txtLogo.setText("Tech Run");
             txtJogar.setText("Jogar");
             txtTutorial.setText("Como jogar");
+            txtCreditos.setText("Créditos");
         };
     }
 }
